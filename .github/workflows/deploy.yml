@@ -18,6 +18,7 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AWS_SECRET_ACCESS_KEY: "AKIAIOSFODNN7EXAMPLE"
   deploy:
     needs: security-scan
     runs-on: ubuntu-latest
